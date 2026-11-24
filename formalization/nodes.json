@@ -1,0 +1,414 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s1",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "Let $L,W:\\Z_{>0}\\to\\Z$. Suppose that, for every prime $p$ and $m\\geq1$,\n\\begin{equation}\n L(pm)\\equiv L(m)\\pmod p,\n \\qquad W(pm)\\equiv W(m)\\pmod {p^{v_p(m)+1}}.\n\\end{equation}\nThen the equation\n\\begin{equation}\n G(x)=\\exp\\left(\\sum_{n\\geq1}\\frac{W(n)}{n}x^nG(L(n)x)^n\\right)\n\\end{equation}\nhas exactly one solution in $\\Q[[x]]$, and it belongs to $1+x\\Z[[x]]$.\nExistence and uniqueness over $\\Q$ hold for arbitrary rational $L,W$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s10",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s10",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s10",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "If $L(n),W(n)\\geq0$, the unique rational solution of\n\\eqref{weighted-equation} has nonnegative coefficients.\nAll six OEIS series covered here have nonnegative integer coefficients.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s2",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s2",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "If $U,V\\in R_p[[x]]$ and $U-V\\in pR_p[[x]]$, then, for $m\\geq1$,\n\\[\n U^m-V^m\\in p^{v_p(m)+1}R_p[[x]].\n\\]",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s3",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "For $h\\in x\\Q[[x]]$, if\n\\[\n ph(x)-h(x^p)\\in pxR_p[[x]],\n\\]\nthen $\\exp(h)\\in1+xR_p[[x]]$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s4",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "The implication \\eqref{input} holds, and its fixed point is unique.\nIn fact, integer $L$ and the first congruence of \\eqref{congruences}\nalready suffice.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s5",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "Let $L,W:\\Z_{>0}\\to\\Q$, with $F_W$ defined as in \\eqref{input}.\nIf both $F_L$ and $F_W$ have integer coefficients,\nthen \\eqref{weighted-equation} has a unique integral solution.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s6",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "The defining series of A163921, A157675 and A159593 have integer coefficients.\nMore generally, $L(n)=a^n$ works for every integer $a$.\nFor $a=0$ the solution is $(1-x)^{-1}$; for $a=1$ it is the Catalan series.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s7",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s7",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s7",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "For every prime $q$, set $L_q(n)=q$ if $q^2\\mid n$ and $L_q(n)=0$\notherwise. Its Hanna fixed point is integral, but\n\\[\n F_{L_q}(x)=(1-x^{q^2})^{-1/q},\\qquad [x^{q^2}]F_{L_q}=1/q.\n\\]\nThus integrality of the fixed point does not imply integrality of the input.\nThis converse is not asserted in the posing source.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s8",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s8",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s8",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "For every integer $a$, the equation\n\\begin{equation}\n A(x)=1+x\\exp\\left(\\sum_{n\\geq1}\\frac{(A(a^nx)-1)^n}{n}\\right)\n\\end{equation}\nhas a unique solution in $\\Q[[x]]$, and it has integer coefficients.\nThis proves the conjectures of A156907 ($a=2$) and A156908 ($a=3$)~\\cite{oeis156907}.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s9",
+      "contributor": null,
+      "identity": "collected:hanna-self-substitution-integrality:3:s9",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+      },
+      "lineage": "collected:hanna-self-substitution-integrality:s9",
+      "macros": {
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\ord": "\\operatorname{ord}"
+      },
+      "next_step": "Existing Lean evidence is being checked before new proof work.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "hanna-self-substitution-integrality",
+      "scope": "in_scope",
+      "statement": "For any integer $a$, the equation\n\\begin{equation}\n A(x)=\\exp\\left(\\sum_{n\\geq1}\\frac{x^n}{n}A(a^nx^n)\\right)\n\\end{equation}\nhas a unique integral solution, including A179471 when $a=2$~\\cite{oeis179471}.\nIts logarithm starts with $xA(ax)+x^2A(a^2x^2)/2$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+      "toolchain": null,
+      "version": 3,
+      "work": "hanna-self-substitution-integrality"
+    }
+  ]
+}

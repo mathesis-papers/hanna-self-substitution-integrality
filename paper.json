@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 97113,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "62df4db6458a3278cc591fa0cb042bd6c006c5e4a243d7408568aa1cac0c9ab4",
+      "sha256": "62df4db6458a3278cc591fa0cb042bd6c006c5e4a243d7408568aa1cac0c9ab4"
+    },
+    "source": {
+      "bytes": 15118,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "8e61b4904d109f45fa4be976658ab830ae3267d09f57020c11f50b6c77cb2687",
+      "sha256": "8e61b4904d109f45fa4be976658ab830ae3267d09f57020c11f50b6c77cb2687"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "We give alternative proofs of Paul D. Hanna's conditional integrality conjecture for rational sequences with integral exponential input, in the unpaginated comment of OEIS A163921, revision #2 (30 March 2012), following Li–Zhong–Zhou's polynomial integrality theorem (arXiv:2611.16283v1, 12 November 2026, Theorem 1.2). An infinite family of integral fixed points with nonintegral logarithmic inputs shows that the converse, which Hanna did not assert, fails. We give an explicit reduction of a signed weighted formulation to that theorem, as well as a direct proof by Frobenius congruences and formal iteration. The same methods establish the shifted equations of A156907 and A156908. An Euler product proves the sparse equation of A179471. All series are ordinary formal power series.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 3,
+    "doi": null,
+    "lean_source": {
+      "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 97113,
+      "sha256": "62df4db6458a3278cc591fa0cb042bd6c006c5e4a243d7408568aa1cac0c9ab4",
+      "url": "/api/v1/collected-papers/hanna-self-substitution-integrality/files/pdf?version=3"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-24T01:04:35.678601363Z",
+    "record": "hanna-self-substitution-integrality",
+    "repository_name": "hanna-self-substitution-integrality",
+    "source": {
+      "bytes": 15118,
+      "sha256": "8e61b4904d109f45fa4be976658ab830ae3267d09f57020c11f50b6c77cb2687",
+      "url": "/api/v1/collected-papers/hanna-self-substitution-integrality/files/source?version=3"
+    },
+    "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-24T01:04:35.678601363Z",
+        "revision": "3",
+        "version": 3
+      }
+    ],
+    "work": "hanna-self-substitution-integrality"
+  }
+}

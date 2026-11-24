@@ -1,0 +1,492 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\hypersetup{pdftitle={A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li--Zhong--Zhou},pdfauthor={Haobo Ma and Wenlin Zhang}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\ord}{\operatorname{ord}}
+\title{A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li--Zhong--Zhou}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{17 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give alternative proofs of Paul D. Hanna's conditional integrality
+conjecture for rational sequences with integral exponential input, in the
+unpaginated comment of OEIS A163921, revision \#2
+(30 March 2012), following Li--Zhong--Zhou's polynomial integrality theorem
+(\nolinkurl{arXiv:2611.16283v1}, 12 November 2026, Theorem 1.2).
+An infinite family of integral fixed points with nonintegral logarithmic
+inputs shows that the converse, which Hanna did not assert, fails.
+We give an explicit reduction of a signed weighted formulation to that
+theorem, as well as a direct proof by Frobenius congruences and formal
+iteration. The same methods establish the shifted equations of A156907
+and A156908. An Euler product proves the sparse equation of A179471.
+All series are ordinary formal power series.
+\end{abstract}
+
+\section{The question and a weighted theorem}
+
+For $L:\Z_{>0}\to\Q$, Hanna's comment asserts the following ``Conjecture'':
+\begin{equation}\label{input}
+ F_L(x)=\exp\left(\sum_{n\geq1}\frac{L(n)}{n}x^n\right)\in\Z[[x]]
+ \quad\Longrightarrow\quad
+ G(x)=\exp\left(\sum_{n\geq1}\frac{x^n}{n}G(L(n)x)^n\right)\in\Z[[x]].
+\end{equation}
+This is the comment of A163921~\cite{oeis163921}; the entry itself takes
+$L(n)=\sigma(n)=\sum_{d\mid n}d$. The related A157675 takes $L(n)=2^n$
+and explicitly conjectures integrality~\cite{oeis157675}.
+We give alternative proofs of both assertions and uniqueness, using and
+comparing with Li--Zhong--Zhou~\cite[Theorem 1.2]{lzz}.
+A weaker condition on $L$ suffices, and allowing weights gives two further
+conjectures of Hanna. The converse obstruction below separates integral
+fixed points from integral logarithmic inputs.
+
+Write $[x^j]B$ for the coefficient of $x^j$ in a series $B$.
+All infinite sums and products below are formal: in each degree only finitely
+many terms contribute. A congruence of series means a congruence of every
+coefficient. For a prime $p$ and a positive integer $m$, let $v_p(m)$ be
+the exponent of $p$ in $m$.
+
+\begin{theorem}\label{weighted}
+Let $L,W:\Z_{>0}\to\Z$. Suppose that, for every prime $p$ and $m\geq1$,
+\begin{equation}\label{congruences}
+ L(pm)\equiv L(m)\pmod p,
+ \qquad W(pm)\equiv W(m)\pmod {p^{v_p(m)+1}}.
+\end{equation}
+Then the equation
+\begin{equation}\label{weighted-equation}
+ G(x)=\exp\left(\sum_{n\geq1}\frac{W(n)}{n}x^nG(L(n)x)^n\right)
+\end{equation}
+has exactly one solution in $\Q[[x]]$, and it belongs to $1+x\Z[[x]]$.
+Existence and uniqueness over $\Q$ hold for arbitrary rational $L,W$.
+\end{theorem}
+
+The tools are classical. The local exponential criterion is the
+Dieudonn\'e--Dwork lemma; a precise formulation appears in
+Krattenthaler--M\"uller~\cite[Lemma 1]{km}. Integer Euler products and their
+divisor sums are the usual Euler-transform description of Dold sequences;
+see Byszewski--Graff--Ward~\cite[Theorem 2.5 and Lemma 2.6]{bgw}.
+Pomerat--Straub~\cite[Theorem 1.1 and Corollary 4.2]{ps} discuss the
+neighboring problem of integral rational powers of a given series and
+the same exponential criterion. Here the unknown series also occurs
+inside its own dilated powers. We give the needed arguments below. The step specific to
+\eqref{weighted-equation} is that the outer power $pm$ amplifies the
+Frobenius congruence enough to cancel the denominator $m$.
+
+\subsection{Relation to Li--Zhong--Zhou's theorem}
+
+Li--Zhong--Zhou~\cite[Theorem 1.2, equations (1.5)--(1.6),
+and Section 5]{lzz} prove that polynomials $R_n(y)\in\Z[y]$ satisfying
+$R_{pm}(y)\equiv R_m(y)\pmod p$ give
+\[
+ \exp\left(\sum_{n\geq1}R_n(y)^n\frac{t^n}{n}\right)
+ \in1+t\Z[y][[t]].
+\]
+Their stated fixed-point equation substitutes a single series for $y$.
+The dilations and weights in Theorem~\ref{weighted} follow by the following
+Euler-product reduction, rather than by identifying those two equations.
+
+Put $c_d=d^{-1}\sum_{e\mid d}\mu(d/e)W(e)$, where $\mu$ is the
+M\"obius function. If $d=p^rh$ with $p\nmid h$, then
+\[
+ dc_d=\sum_{e\mid h}\mu(h/e)
+       \bigl(W(p^re)-W(p^{r-1}e)\bigr)\in p^r\Z.
+\]
+Thus $c_d\in\Z$ and $W(n)=\sum_{d\mid n}dc_d$.
+For a polynomial $B\in1+y\Z[y]$, take
+$R_m^{(d)}(y)=B(L(dm)y)^d$ in their theorem. These polynomials satisfy
+its congruence hypothesis, so
+\[
+ H_d(t,y)=\exp\left(\sum_{m\geq1}
+       B(L(dm)y)^{dm}\frac{t^m}{m}\right)\in1+t\Z[y][[t]].
+\]
+Taking logarithms and putting $n=dm$ gives
+\[
+ \prod_{d\geq1}H_d(x^d,x)^{c_d}
+ =\exp\left(\sum_{n\geq1}\frac{W(n)}n x^nB(L(n)x)^n\right).
+\]
+The product is integral, including negative $c_d$, and is well-defined
+degree by degree. Truncating $B$ extends the identity and integrality to
+$B\in1+x\Z[[x]]$. The coefficient-stabilization argument below gives
+existence and uniqueness of the fixed point. Hence the full signed weighted
+theorem, and consequently Hanna's original assertion, follow from
+Li--Zhong--Zhou's polynomial theorem. The local proof below gives a direct
+alternative, with the same classical power-lifting mechanism.
+
+For the shifted family one can also apply their theorem directly with
+$R_n(y)=a^nB(a^ny)$: Fermat's congruence checks its hypothesis for every
+integer $a$, and $R_n(y)^n=a^{n^2}B(a^ny)^n$.
+The scalar weights $a^{n^2}$ already have an integrality proof for every
+integer $a$ in Bala's A155200 comment (25 December 2019)~\cite{bala}.
+For positive bases, Jaidee--Moss--Ward~\cite[Theorem 2 and Example 7]{jmw}
+give the more general power-time-change result, crediting Moss's 2003 work.
+These scalar results are ingredients, not assertions of the dilated
+self-substitution equation.
+
+\section{Local integrality and the proof}
+
+Fix a prime $p$ and put
+$R_p=\Z_{(p)}=\{a/b:a,b\in\Z,\ p\nmid b\}$.
+The elementary identity
+$\Q\cap\bigcap_p R_p=\Z$ is understood inside $\Q$.
+
+\begin{lemma}[Power lifting]\label{lifting}
+If $U,V\in R_p[[x]]$ and $U-V\in pR_p[[x]]$, then, for $m\geq1$,
+\[
+ U^m-V^m\in p^{v_p(m)+1}R_p[[x]].
+\]
+\end{lemma}
+\begin{proof}
+If $U-V=p^rD$ with $r\geq1$, expand $(V+p^rD)^p-V^p$.
+The terms with exponents $1,\ldots,p-1$ contain a factor $p^{r+1}$;
+the last contains $p^{rp}$, and $rp\geq r+1$, including $p=2$.
+Write $m=p^sb$ with $p\nmid b$. Applying this observation $s$ times
+shows that $U^{p^s}-V^{p^s}$ is divisible by $p^{s+1}$.
+Raising these two series to the power $b$ preserves that divisibility,
+by the factorization of a difference of $b$th powers.
+\end{proof}
+
+\begin{lemma}[Local exponential criterion]\label{dwork}
+For $h\in x\Q[[x]]$, if
+\[
+ ph(x)-h(x^p)\in pxR_p[[x]],
+\]
+then $\exp(h)\in1+xR_p[[x]]$.
+\end{lemma}
+\begin{proof}
+Put $E=\exp(h)$ and $D=ph(x)-h(x^p)$.
+For $j\geq1$ one has $v_p(j!)\leq j-1$, since
+$v_p(j!)=\sum_{r\geq1}\lfloor j/p^r\rfloor<j$.
+Thus $\exp(D)\in1+pxR_p[[x]]$ and
+\[
+ E(x)^p/E(x^p)=\exp(D)\in1+pxR_p[[x]].
+\]
+Induct on the degree $N$ to prove that $e_N=[x^N]E$ lies in $R_p$.
+Assume this below degree $N$ and set
+$B=1+\sum_{1\leq j<N}e_jx^j$. Frobenius in the residue field $\mathbb F_p$
+gives $B(x)^p\equiv B(x^p)\pmod p$. Both series are units of $R_p[[x]]$,
+so $B(x)^p/B(x^p)\in1+pxR_p[[x]]$.
+Consequently $Q=E/B$ satisfies $Q(x)^p/Q(x^p)\in1+pxR_p[[x]]$.
+But $Q=1+e_Nx^N+O(x^{N+1})$, so the coefficient of $x^N$ in this
+ratio is $pe_N$. It lies in $pR_p$, hence $e_N\in R_p$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{weighted}]
+For $B\in1+x\Q[[x]]$, define
+\[
+ H_B(x)=\sum_{n\geq1}\frac{W(n)}n x^n B(L(n)x)^n,
+ \qquad T(B)=\exp(H_B).
+\]
+First suppose $B\in1+xR_p[[x]]$ and \eqref{congruences} holds.
+Pair the terms of index $pm$ in $pH_B(x)$ with those of index $m$
+in $H_B(x^p)$ to obtain
+\begin{align}\label{pairing}
+ pH_B(x)-H_B(x^p)
+ ={}&\sum_{p\nmid n}\frac{pW(n)}n x^nB(L(n)x)^n\notag\\
+ &+\sum_{m\geq1}\frac{x^{pm}}m
+ \bigl(W(pm)B(L(pm)x)^{pm}-W(m)B(L(m)x^p)^m\bigr).
+\end{align}
+The first sum belongs to $pxR_p[[x]]$.
+For the second put $U=B(L(pm)x)^p$ and $V=B(L(m)x^p)$.
+Reduction modulo $p$, Frobenius, and $L(pm)^p\equiv L(m)\pmod p$ give
+\[
+ U\equiv B(L(pm)^p x^p)\equiv B(L(m)x^p)=V\pmod p.
+\]
+The reduction of a coefficient of $B$ is fixed by its $p$th power,
+because it lies in $\mathbb F_p$. If $s=v_p(m)$, Lemma~\ref{lifting}
+therefore makes $U^m-V^m$ divisible by $p^{s+1}$.
+The bracket in \eqref{pairing} equals
+\[
+ W(pm)(U^m-V^m)+(W(pm)-W(m))V^m,
+\]
+whose two terms are divisible by $p^{s+1}$.
+Division by $m$ leaves a multiple of $p$. Lemma~\ref{dwork} now
+shows that $T(B)\in1+xR_p[[x]]$.
+Applying this at every prime shows that $T$ preserves $1+x\Z[[x]]$.
+
+For existence and uniqueness, if $B-C\in x^d\Q[[x]]$ with $d\geq1$,
+then $H_B-H_C\in x^{d+1}\Q[[x]]$: dilation and taking a positive
+power preserve divisibility by $x^d$, and each summand has a further
+factor $x^n$, $n\geq1$. Taking the exponential preserves that
+divisibility as well. Hence
+\[
+ B\equiv C\pmod{x^d}\quad\Longrightarrow\quad
+ T(B)\equiv T(C)\pmod{x^{d+1}}.
+\]
+Starting at $G_0=1$ and setting $G_{r+1}=T(G_r)$, it follows inductively
+that $G_{r+1}\equiv G_r\pmod{x^{r+1}}$.
+Each coefficient stabilizes, defining $G=\lim_rG_r$ coefficientwise.
+The finite dependence of each coefficient gives $T(G)=G$.
+Every solution has constant coefficient $1$ and agrees successively
+with $G$ modulo $x,x^2,\ldots$, proving uniqueness.
+Under \eqref{congruences}, every $G_r$ is integral, so $G$ is integral.
+\end{proof}
+
+\section{Hanna's conjectures and related entries}
+
+\begin{corollary}\label{original}
+The implication \eqref{input} holds, and its fixed point is unique.
+In fact, integer $L$ and the first congruence of \eqref{congruences}
+already suffice.
+\end{corollary}
+\begin{proof}
+For $F\in1+x\Z[[x]]$ there are integers $c_d$ such that
+$F=\prod_{d\geq1}(1-x^d)^{-c_d}$.
+To construct them, remove the coefficient of degree $d$ by multiplying
+the residual series by $(1-x^d)^{c_d}$, proceeding in increasing degree.
+All these operations preserve integer coefficients, including when $c_d<0$.
+Taking the formal logarithmic derivative of $F=F_L$ yields
+\[
+ L(n)=[x^n]\frac{xF'(x)}{F(x)}=\sum_{d\mid n}d c_d.
+\]
+Thus $L(n)\in\Z$.
+If $m=p^sb$ with $p\nmid b$, the divisors of $pm$ not dividing $m$
+are precisely $p^{s+1}e$ with $e\mid b$. Consequently
+\[
+ L(pm)-L(m)=p^{s+1}\sum_{e\mid b} e c_{p^{s+1}e},
+\]
+which is divisible by $p$. Apply Theorem~\ref{weighted} with $W(n)=1$.
+\end{proof}
+
+\begin{corollary}[Two integral inputs]\label{twoinputs}
+Let $L,W:\Z_{>0}\to\Q$, with $F_W$ defined as in \eqref{input}.
+If both $F_L$ and $F_W$ have integer coefficients,
+then \eqref{weighted-equation} has a unique integral solution.
+\end{corollary}
+\begin{proof}
+The Euler-product argument just given applies separately to $L$ and $W$.
+It makes both sequences integer-valued and gives
+$W(pm)-W(m)\in p^{v_p(m)+1}\Z$, as well as the needed congruence for $L$.
+Theorem~\ref{weighted} applies.
+\end{proof}
+
+\begin{corollary}[Divisor sums and geometric dilations]\label{instances}
+The defining series of A163921, A157675 and A159593 have integer coefficients.
+More generally, $L(n)=a^n$ works for every integer $a$.
+For $a=0$ the solution is $(1-x)^{-1}$; for $a=1$ it is the Catalan series.
+\end{corollary}
+\begin{proof}
+For $L(n)=\sigma(n)$, take $c_d=1$ for every $d$; then
+$F_L=\prod_{d\geq1}(1-x^d)^{-1}\in\Z[[x]]$.
+For every integer $a$, the choice $L(n)=a^n$ has
+$F_L=(1-ax)^{-1}$. Thus A157675 ($a=2$) and A159593 ($a=3$)
+have integer coefficients~\cite{oeis157675,oeis159593}.
+For $a=0$ the solution is $(1-x)^{-1}$; for $a=1$ it satisfies
+$G=(1-xG)^{-1}$, equivalently $G=1+xG^2$, the Catalan equation.
+\end{proof}
+
+\begin{corollary}[An unasserted converse fails]\label{converse}
+For every prime $q$, set $L_q(n)=q$ if $q^2\mid n$ and $L_q(n)=0$
+otherwise. Its Hanna fixed point is integral, but
+\[
+ F_{L_q}(x)=(1-x^{q^2})^{-1/q},\qquad [x^{q^2}]F_{L_q}=1/q.
+\]
+Thus integrality of the fixed point does not imply integrality of the input.
+This converse is not asserted in the posing source.
+\end{corollary}
+\begin{proof}
+For a prime $p\ne q$, divisibility by $q^2$ is unchanged on replacing $m$
+by $pm$, so $L_q(pm)=L_q(m)$. For $p=q$ both values are divisible by $q$.
+Corollary~\ref{original} applies under its weaker hypothesis. The displayed
+input follows by summing $\sum_{k\geq1}q x^{q^2k}/(q^2k)$.
+\end{proof}
+
+\begin{corollary}\label{shifted}
+For every integer $a$, the equation
+\begin{equation}\label{shifted-equation}
+ A(x)=1+x\exp\left(\sum_{n\geq1}\frac{(A(a^nx)-1)^n}{n}\right)
+\end{equation}
+has a unique solution in $\Q[[x]]$, and it has integer coefficients.
+This proves the conjectures of A156907 ($a=2$) and A156908 ($a=3$)~\cite{oeis156907}.
+\end{corollary}
+\begin{proof}
+Any solution has the form $A=1+xG$ with $G(0)=1$.
+Since $(A(a^nx)-1)^n=a^{n^2}x^nG(a^nx)^n$, the equation for $G$
+is \eqref{weighted-equation} with $L(n)=a^n$ and $W(n)=a^{n^2}$.
+The first congruence in \eqref{congruences} follows from Fermat's theorem.
+For the second write $s=v_p(m)$.
+If $p\mid a$ and $a\ne0$, both $a^{m^2}$ and $a^{p^2m^2}$ are divisible
+by $p^{s+1}$, since $m^2\geq s+1$; the case $a=0$ is immediate.
+If $p\nmid a$, Euler's theorem modulo $p^{s+1}$ applies because
+$m^2(p^2-1)$ is divisible by $p^s(p-1)$.
+Thus $a^{p^2m^2}\equiv a^{m^2}\pmod{p^{s+1}}$, as required.
+Theorem~\ref{weighted} proves the assertion, including $a\leq0$.
+\end{proof}
+
+\begin{corollary}[Sparse substitution]\label{sparse}
+For any integer $a$, the equation
+\begin{equation}\label{sparse-equation}
+ A(x)=\exp\left(\sum_{n\geq1}\frac{x^n}{n}A(a^nx^n)\right)
+\end{equation}
+has a unique integral solution, including A179471 when $a=2$~\cite{oeis179471}.
+Its logarithm starts with $xA(ax)+x^2A(a^2x^2)/2$.
+\end{corollary}
+\begin{proof}
+For integral $B$ with $B(0)=1$, put $K_B=\sum_{n\geq1}x^nB(a^nx^n)/n$.
+The second sum in the analogue of \eqref{pairing} has brackets
+\[
+ B(a^{pm}x^{pm})-B(a^m x^{pm}).
+\]
+For $s=v_p(m)$ one has $a^{pm}\equiv a^m\pmod{p^{s+1}}$:
+if $p\mid a$, use $m\geq s+1$ and handle $a=0$ directly;
+otherwise use Euler's theorem, since $m(p-1)$ is divisible by $p^s(p-1)$.
+Every coefficient of the bracket is therefore divisible by $p^{s+1}$.
+Lemma~\ref{dwork} proves that $\exp(K_B)$ is integral.
+If $B-C$ is divisible by $x^d$, the $n$th summand of $K_B-K_C$
+is divisible by $x^{n(d+1)}$, so the same fixed-point argument proves
+existence and uniqueness. Taking the formal logarithm proves the final claim.
+\end{proof}
+
+An Euler-product proof uses Manyama's identity~\cite{manyama}.
+Write $A(x)=\sum_{j\geq0}b_jx^j$. Then
+\[
+ \exp\left(\sum_{n\geq1}\frac{x^n}{n}A(a^nx^n)\right)
+ =\prod_{j\geq0}(1-a^jx^{j+1})^{-b_j}.
+\]
+Indeed, expand $A$ and sum
+$\sum_{n\geq1}(a^jx^{j+1})^n/n=-\log(1-a^jx^{j+1})$.
+The coefficient of degree $N$ in this product depends only on
+$b_0,\ldots,b_{N-1}$. Starting with $b_0=1$, integral binomial
+expansions therefore prove integrality and uniqueness recursively,
+for every integer $a$. The identity supplies the Euler product; its
+triangular coefficient dependence supplies the fixed-point conclusion.
+
+The example line of A179471 prints
+``$\log(A(x))=A(2x)+\cdots$''. Its first term needs the factor $x$:
+the printed right-hand side has constant coefficient $1$, whereas
+$\log A$ has constant coefficient $0$. The corrected expansion is
+\[
+ \log A(x)=xA(2x)+\frac{x^2}{2}A(4x^2)+\frac{x^3}{3}A(8x^3)+\cdots.
+\]
+The defining equation and the PARI expression in that entry already agree
+with this correction. The numerical asymptotic constant listed there is
+not covered by the present argument.
+
+\begin{corollary}[Nonnegative coefficients]\label{nonnegative}
+If $L(n),W(n)\geq0$, the unique rational solution of
+\eqref{weighted-equation} has nonnegative coefficients.
+All six OEIS series covered here have nonnegative integer coefficients.
+\end{corollary}
+\begin{proof}
+Dilation by a nonnegative number, positive integer powers, addition,
+and formal exponentiation preserve nonnegative coefficients.
+Thus every iterate starting at $1$ is nonnegative, and so is its
+coefficientwise limit. The same argument applies to the sparse equation
+when $a\geq0$. The shifted series has $A=1+xG$ with
+$L(n)=a^n\geq0$ and $W(n)=a^{n^2}\geq0$ for its positive source bases.
+Integrality was proved above.
+\end{proof}
+
+\section{Coverage and verification}
+
+The posing entries give the following coverage. Their definitions, comments,
+and comparisons are separated from the asymptotic assertion.
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}@{}}
+\toprule
+Source & Statement & Coverage\\
+\midrule
+A163921, comment & Conditional integrality for rational $L$ & Reproved; prior proof via Li--Zhong--Zhou (2026)\\
+A163921, definition & $L(n)=\sigma(n)$ & Reproved; same reduction\\
+A157675 & $L(n)=2^n$ & Reproved; same reduction\\
+A157675, A159593, comparison & Catalan equation & Prior identity; derived in Corollary~\ref{instances}\\
+A159593, definition & $L(n)=3^n$ & Reproved; same reduction\\
+A156907, A156908 & Shifted integrality conjectures & Reproved; prior proof via Li--Zhong--Zhou (2026)\\
+A179471, definition & Sparse substitution, $a=2$ & Proved; Euler identity of Manyama (2017)\\
+A179471, example & Logarithm without initial $x$ & Refuted-and-corrected, expansion above\\
+A179471, formula & Asymptotic constant & Not covered\\
+All six entries, keyword & Nonnegative coefficients & Proved, Corollary~\ref{nonnegative}\\
+Not posed & Two integral inputs & Proved; also follows by the same reduction\\
+Not asserted in source & Converse of A163921 & Fails for $L_2$, Corollary~\ref{converse}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+``Prior proof via'' denotes the explicit deduction from the polynomial
+theorem above; Li--Zhong--Zhou do not name these six target entries.
+Their explicit implicit-equation application is A163138.
+
+In the pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean}{main Lean file},
+\texttt{result} in the namespace
+\texttt{HannaSelfSubstitutionIntegrality}
+proves existence and integrality of every solution under the integral-input
+hypothesis of \eqref{input}, for every rational sequence $L$.
+Its positive-index sum \texttt{logSum} has degree-$N$ coefficient
+$\sum_{n=1}^N[x^{N-n}]f(n)/n$, so the index-zero value of $L$ is unused.
+The definition \texttt{SolvesHanna} expresses precisely that fixed-point equation;
+\texttt{IntegralSeries} means that every rational coefficient is an integer.
+In the pinned
+\href{https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegralityA157675.lean}{specialization Lean file},
+\texttt{result} in the namespace
+\texttt{HannaSelfSubstitutionIntegralityA157675}
+proves the $L(n)=2^n$ case. The same main file's \texttt{geometric\_input}
+proves integrality of $F_L$ for every integer base $a$ and $L(n)=a^n$;
+it is not a theorem about all those fixed points by itself.
+The full namespaces begin with \texttt{D5.S1.Recurrence.Algebraic.}
+Uniqueness, the weighted and two-input theorems, the shifted and sparse
+extensions, and the converse obstruction have the written proofs given here.
+
+The accompanying \texttt{verify.py} compares rational coefficient recursion with
+formal iteration and checks the available OEIS coefficient lists. Its finite
+scope and exact coefficients are recorded in \texttt{verification.json}.
+These coefficient checks are distinct from the all-degree proofs above.
+
+\begin{thebibliography}{99}
+\bibitem{lzz} J. Li, Y. Zhong and Y. Zhou,
+\emph{Integral Exponential Series: Fibonacci Weights and Implicit Equations},
+arXiv:2611.16283v1 (12 November 2026), Theorem 1.2,
+equations (1.5)--(1.6), p.~2, and Section 5, pp.~7--8.
+\url{https://arxiv.org/abs/2611.16283v1}.
+\bibitem{bala} P. Bala, integrality proof for integer square-exponential
+weights, comment in \emph{OEIS A155200}, 25 December 2019.
+\url{https://oeis.org/A155200}.
+\bibitem{jmw} S. Jaidee, P. Moss and T. Ward,
+\emph{Time-changes preserving zeta functions}, arXiv:1809.09199,
+Theorem 2 and Example 7.
+\url{https://arxiv.org/abs/1809.09199}.
+\bibitem{manyama} S. Manyama, generalized Euler-transform identity,
+FORMULA block in \emph{OEIS A266964}, 14 November 2017.
+\url{https://oeis.org/A266964}.
+\bibitem{oeis163921} P. D. Hanna, \emph{OEIS A163921}, unpaginated comment and
+definition, contributed 1 September 2009, revision \#2, 30 March 2012.
+\url{https://oeis.org/A163921}.
+\bibitem{oeis157675} P. D. Hanna, \emph{OEIS A157675}, comment and Catalan
+comparison, contributed 6 March 2009, revision \#2, 30 March 2012.
+\url{https://oeis.org/A157675}.
+\bibitem{km} C. Krattenthaler and T. W. M\"uller,
+\emph{Truncated versions of Dwork's lemma for exponentials of power series
+and $p$-divisibility of arithmetic functions}, Adv. Math. \textbf{283} (2015),
+489--529. \url{https://doi.org/10.1016/j.aim.2015.05.018}.
+The cited version is arXiv:1412.7014v2, Lemma 1, p.~3.
+\url{https://arxiv.org/abs/1412.7014v2}.
+\bibitem{ps} J. Pomerat and A. Straub,
+\emph{Criteria for the integrality of $n$th roots of power series},
+arXiv:2406.12010v1 (17 June 2024), Theorem 1.1 and Corollary 4.2.
+\url{https://arxiv.org/abs/2406.12010v1}.
+\bibitem{bgw} J. Byszewski, G. Graff and T. Ward,
+\emph{Dold sequences, periodic points, and dynamics},
+Bull. London Math. Soc. \textbf{53} (2021), 1263--1298,
+Theorem 2.5 and Lemma 2.6. \url{https://doi.org/10.1112/blms.12531}.
+\bibitem{oeis159593} P. D. Hanna, \emph{OEIS A159593}, definition,
+contributed 2 May 2009, revision \#2, 30 March 2012.
+\url{https://oeis.org/A159593}.
+\bibitem{oeis156907} P. D. Hanna, \emph{OEIS A156907 and A156908},
+integrality comments, contributed 4 March 2009, revision \#2, 30 March 2012.
+\url{https://oeis.org/A156907}; \url{https://oeis.org/A156908}.
+\bibitem{oeis179471} P. D. Hanna, \emph{OEIS A179471}, definition and formula,
+contributed 15 July 2010, revision \#4, 4 October 2013.
+\url{https://oeis.org/A179471}.
+\end{thebibliography}
+\noindent\small\textbf{License.} Creative Commons Attribution 4.0 International
+(CC BY 4.0). \url{https://creativecommons.org/licenses/by/4.0/}.
+\end{document}

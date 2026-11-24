@@ -1,9 +1,33 @@
-# Mathesis paper template
+# A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou
 
-One repository for one exact Mathesis paper version. This template has no selected paper and no example books.
+**Authors:** Haobo Ma, Wenlin Zhang
 
-Authors can start from the [Mathesis LaTeX manuscript template](docs/layer-mathesis/MANUSCRIPT.md) for papers and short notes. Our own short notes use it as their default reference; sections and length follow the mathematical argument.
+We give alternative proofs of Paul D. Hanna's conditional integrality conjecture for rational sequences with integral exponential input, in the unpaginated comment of OEIS A163921, revision #2 (30 March 2012), following Li–Zhong–Zhou's polynomial integrality theorem (arXiv:2611.16283v1, 12 November 2026, Theorem 1.2). An infinite family of integral fixed points with nonintegral logarithmic inputs shows that the converse, which Hanna did not assert, fails. We give an explicit reduction of a signed weighted formulation to that theorem, as well as a direct proof by Frobenius congruences and formal iteration. The same methods establish the shifted equations of A156907 and A156908. An Euler product proves the sparse equation of A179471. All series are ordinary formal power series.
 
-The upstream books template supplies the machinery; the Mathesis layer supplies the publisher adapter and the [enforced four-zone layout](docs/layer-mathesis/LAYOUT.md).
+- PDF: [frozen public file](paper.pdf)
+- License: CC-BY-4.0
+- Version: 3
+- Mathesis record: [hanna-self-substitution-integrality](https://mathesis-omega-research.apps.chrono-ai.fun/papers/hanna-self-substitution-integrality?version=3)
 
-Use [the publisher pipeline](docs/layer-mathesis/PIPELINE.md) to import a public projection with `paper.py fill`. It creates the paper record, one bilingual content skeleton and a generated paper README. Upgrade with `tbook template update`; keep preparation run records outside the repository.
+## How to cite
+
+Haobo Ma, Wenlin Zhang (2026). A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou. Mathesis, version 3. https://mathesis-omega-research.apps.chrono-ai.fun/papers/hanna-self-substitution-integrality?version=3
+
+## Statement progress
+
+| Statement | Formalization status | Source | Verification basis |
+|---|---|---|---|
+| Theorem (s1) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Corollary (s10) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Lemma (s2) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Lemma (s3) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Corollary (s4) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Corollary (s5) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Corollary (s6) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Corollary (s7) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Corollary (s8) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+| Corollary (s9) | preparing | [Lean source](https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean) | No public receipt |
+
+## Contributions
+
+Original authors are listed above. Formalization contributors and attribution are retained in `formalization/nodes.json`; repository pull requests do not confer verification or credit. Submit formalization attempts through the Mathesis attempt path described in [CONTRIBUTING.md](CONTRIBUTING.md).
