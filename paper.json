@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24486634",
     "current_version": 3,
-    "doi": null,
+    "doi": "10.5281/zenodo.24486635",
     "lean_source": {
       "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
       "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
