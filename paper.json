@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24486634",
     "current_version": 3,
     "doi": "10.5281/zenodo.24486635",
+    "kind": "note",
     "lean_source": {
       "revision": "91f44a2b8e396fd6374dd8ae047c158afbbebba4",
       "url": "https://github.com/the-omega-institute/trureturing/blob/91f44a2b8e396fd6374dd8ae047c158afbbebba4/D5/S1/Recurrence/Algebraic/HannaSelfSubstitutionIntegrality.lean"
@@ -55,10 +56,12 @@
     "title": "A converse obstruction and proofs of Paul D. Hanna's self-substitution conjectures after Li–Zhong–Zhou",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-24T01:04:35.678601363Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "hanna-self-substitution-integrality"
